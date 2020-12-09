@@ -1,0 +1,23 @@
+@mixin input() {
+  @include _input-base();
+
+  padding: var(--space-xs) 0.5em;
+}
+
+@mixin select() {
+  @include _input-base();
+
+  padding: var(--space-xs) 0.25em;
+}
+
+@mixin _input-base() {
+  border: $border-size-normal $day-ft-color solid;
+  border-radius: $border-radius;
+
+  transition: all $duration-base;
+
+  &:focus {
+    color: $theme-color;
+    border-color: $theme-color;
+  }
+}
